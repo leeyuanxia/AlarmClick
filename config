@@ -8,3 +8,6 @@
 [remote "origin"]
 	url = https://github.com/leeyuanxia/AlarmClick.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "orgin"]
+	url = https://github.com/leeyuanxia/AlarmClick.git
+	fetch = +refs/heads/*:refs/remotes/orgin/*
