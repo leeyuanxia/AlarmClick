@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">clock</string>
+    <string name="cancel">拒绝</string>
+    <string name="submit">同意</string>
+    <string name="perDialog">""</string>
+    <string name="copyRight">
+        Copyright © p171813950 王阳.All Rights Reserved.
+    </string>
+</resources>

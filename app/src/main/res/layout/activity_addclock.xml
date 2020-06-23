@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:padding="10dp"
+
+    android:layout_height="match_parent"
+    tools:context=".AddclockActivity">
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+    android:id="@+id/addClockTitle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:text="添加闹钟"
+    android:textColor="#f39c12"
+    android:textSize="15dp"
+    android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:id="@+id/addYes"
+        android:text="保存"
+        android:textColor="#fc4327"
+        android:textSize="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:id="@+id/addCancel"
+        android:text="取消"
+        android:textColor="#757575"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="10dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/addclock"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/addCancel"
+        android:gravity="center"
+        android:text="20小时18分钟后响铃"
+        />
+    <RelativeLayout
+        android:id="@+id/timeChooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        app:layout_constraintTop_toBottomOf="@+id/distance"
+        android:layout_marginTop="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:gravity="center"
+        android:background="#ffffff" >
+
+        <wangyang.clock.PickerView
+            android:id="@+id/minute_pv"
+            android:layout_width="80dp"
+            android:layout_height="160dp" />
+
+        <TextView
+            android:id="@+id/minute_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/minute_pv"
+            android:text="时"
+            android:textColor="#ffaa33"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+        <wangyang.clock.PickerView
+            android:id="@+id/second_pv"
+            android:layout_width="80dp"
+            android:layout_height="160dp"
+            android:layout_toRightOf="@id/minute_tv" />
+
+        <TextView
+            android:id="@+id/second_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/second_pv"
+            android:text="分"
+            android:textColor="#ffaa33"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <View
+            android:id="@+id/view"
+        android:layout_marginTop="50dp"
+            android:background="#a3a3a3"
+            app:layout_constraintTop_toBottomOf="@+id/timeChooser"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    <android.support.constraint.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        android:id="@+id/clrepeatChoose"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="5dp"
+        android:paddingVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/repeatChoose"
+            android:text="重 复"
+            android:textSize="15dp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/repeatContent"
+            android:text="仅一次"
+            android:textSize="10dp"
+            android:textColor="#828282"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="3dp"
+            app:layout_constraintTop_toBottomOf="@+id/repeatChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:background="@drawable/ic_arrow_drop_down_black_24dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </android.support.constraint.ConstraintLayout>
+    <View
+        android:id="@+id/view2"
+        android:background="#a3a3a3"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/clrepeatChoose"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+   <android.support.constraint.ConstraintLayout
+    app:layout_constraintTop_toBottomOf="@+id/view2"
+    android:id="@+id/clvibrateChoose"
+    android:layout_marginTop="10dp"
+    android:paddingLeft="5dp"
+    android:paddingVertical="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/vibrateChoose"
+        android:text="振 动"
+        android:textSize="15dp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/vibrateContent"
+        android:text="是"
+        android:textSize="10dp"
+        android:textColor="#828282"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/vibrateChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:background="@drawable/ic_arrow_drop_down_black_24dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </android.support.constraint.ConstraintLayout>
+    <View
+        android:id="@+id/view3"
+        android:background="#a3a3a3"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/clvibrateChoose"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+</android.support.constraint.ConstraintLayout>

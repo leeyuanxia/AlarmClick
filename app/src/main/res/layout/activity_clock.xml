@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:padding="10dp"
+
+    tools:context=".ClockActivity">
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="5dp"
+        android:id="@+id/clockTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="闹钟"
+        android:textColor="#f39c12"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent" />
+    <TextView
+        android:id="@+id/addclock"
+        app:layout_constraintTop_toBottomOf="@+id/clockTitle"
+        android:text="+ 添加闹钟"
+        android:layout_marginTop="15dp"
+        android:textColor="#EE0000"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <ListView
+        android:id="@+id/clockItmesList"
+        android:layout_marginTop="10dp"
+        android:divider="@null"
+        app:layout_constraintTop_toBottomOf="@+id/addclock"
+        android:layout_width="match_parent"
+        android:layout_height="470dp">
+
+
+    </ListView>
+</android.support.constraint.ConstraintLayout>
